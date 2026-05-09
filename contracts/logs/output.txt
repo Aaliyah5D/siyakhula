@@ -1,0 +1,39 @@
+    Finished `release` profile [optimized] target(s) in 0.81s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.31s
+     Running unittests src/lib.rs (/69f9fe3bbe9241901c1cbd15/contracts/target/debug/deps/workspace-51ba4ba41e55366b)
+
+Found a 'test' script in the Anchor.toml. Running it as a test suite!
+
+Running test suite: "/69f9fe3bbe9241901c1cbd15/contracts/Anchor.toml"
+
+yarn run v1.22.22
+$ /69f9fe3bbe9241901c1cbd15/contracts/node_modules/.bin/ts-mocha -p ./tsconfig.json -t 1000000 'tests/**/*.ts'
+
+
+  siyakhula
+    ✔ Initialize Config (411ms)
+    ✔ Fails to initialize config twice
+    ✔ Initialize Campaign (403ms)
+    ✔ Fails to create campaign with invalid parameters
+    ✔ Initialize all 6 milestones (2431ms)
+    ✔ Fails to create milestone with wrong farmer
+    ✔ Investor 1 invests in campaign (393ms)
+    ✔ Investor 2 invests and campaign becomes Funded (441ms)
+    ✔ Fails to invest zero amount (386ms)
+    ✔ Verify milestone 0 - Land Preparation (401ms)
+    ✔ Fails to verify already verified milestone
+    ✔ Fails to verify milestone with non-authority signer
+    ✔ Verify milestones 1-5 (2000ms)
+    ✔ Complete harvest after all milestones verified (401ms)
+    ✔ Fails to complete harvest on already harvested campaign
+    Loss Sharing Scenario
+      ✔ Trigger loss sharing on failed campaign (413ms)
+      ✔ Investor withdraws from failed campaign (410ms)
+      ✔ Fails to withdraw twice
+    Refund Scenario (Active, not fully funded)
+      ✔ Investor withdraws full refund from active unfunded campaign (413ms)
+
+
+  19 passing (13s)
+
+Done in 14.65s.
